@@ -1,0 +1,23 @@
+<!--pages/scan/scan.wxml.wxml-->
+
+<view>
+  <button bindtap="clickQuery">查询桌子信息</button>
+  <button bindtap="clickQueryOver">查询留座超时桌子</button>
+
+  <view wx:if="{{hasUserInfo}}">
+    <button bindtap="clickOccupied">我要留座</button>
+    <button bindtap="clickRelease">解除占座</button>
+  </view>
+  <view>
+    <text>{{messges}}</text>
+  </view>
+</view>
+
+
+<view wx:if="{{choiceTime == true}}" class="section section_gap">
+  <text class="section__title">选择留座时间（分钟）</text>
+  <view class="body-view">
+    <slider bindchange="sliderChange" max="60" show-value/>
+  </view>
+  <button bindtap="up">确定</button>
+</view>

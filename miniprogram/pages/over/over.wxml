@@ -1,0 +1,2 @@
+<!--over.wxml-->
+<view wx:for="{{ans}}"> {{item}} </view>
